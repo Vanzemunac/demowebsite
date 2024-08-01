@@ -6,7 +6,7 @@ body{
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .maincontainer{
 position: absolute;
-width: 350px;
+width: 380px;
 height: 420px;
 background: none;
 top: 30%;
@@ -1269,9 +1269,62 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   src: url('Hanged Letters.ttf'); /* Locate the .ttf file within your directory*/
 }
 
-#tekst{
+.playful span {
   font-family: CustomFont;
-  font-size: 50px;
-  padding-bottom: 0px;
+  font-size: 30px;
+  position: relative;
+  color: #5362F6;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation: scatter 1.75s infinite;
 }
 
+.playful span:nth-child(2n) {
+  
+  color: #ED625C;
+  text-shadow: textShadow(0.25, 6, #F2A063);
+  animation-delay: 0.3s;
+}
+
+.playful span:nth-child(3n) {
+  color: #FFD913;
+  text-shadow: textShadow(0.25, 6, #6EC0A9);
+  animation-delay: 0.20s;
+}
+
+.playful span:nth-child(5n) {
+  color: #555BFF;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation-delay: 0.4s;
+}
+
+.playful span:nth-child(7n), .playful span:nth-child(11n) {
+  color: #FF9C55;
+  text-shadow: textShadow(0.25, 6, #FF5555);
+  animation-delay: 0.25s;
+}
+
+@keyframes scatter {
+  0% {
+    top: 20;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+.playful {
+  font-family: CustomFont;
+  font-size: 20px;
+  padding-bottom: 0px;
+  text-transform: uppercase;
+}
+
+canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+}
